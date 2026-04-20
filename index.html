@@ -1,1 +1,298 @@
-"Hello World" 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jákup Svøðstein</title>
+  <meta name="description" content="Researcher in scientific ML, graph neural networks, and domain-specific benchmarking for weather, maritime, and logistics systems.">
+  <style>
+    :root {
+      --text: #1a1a1a;
+      --text-secondary: #555;
+      --bg: #fff;
+      --border: #e0e0e0;
+      --accent: #2c5282;
+      --card-bg: #fafafa;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Charter', 'Bitstream Charter', 'Georgia', serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.65;
+      font-size: 17px;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ── Header ── */
+    header {
+      padding: 60px 0 40px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    header h1 {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 6px;
+    }
+
+    .affiliation {
+      font-size: 15px;
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+    }
+
+    .positioning {
+      font-size: 17px;
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .links {
+      margin-top: 18px;
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+
+    .links a { margin-right: 18px; }
+
+    /* ── Sections ── */
+    section {
+      padding: 40px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    section:last-of-type { border-bottom: none; }
+
+    section h2 {
+      font-size: 18px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+    }
+
+    /* ── Project cards ── */
+    .project {
+      margin-bottom: 28px;
+    }
+
+    .project:last-child { margin-bottom: 0; }
+
+    .project h3 {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+
+    .project .venue {
+      font-size: 14px;
+      color: var(--text-secondary);
+      font-style: italic;
+      margin-bottom: 6px;
+    }
+
+    .project p {
+      font-size: 16px;
+      color: var(--text);
+      line-height: 1.55;
+    }
+
+    /* ── Publications ── */
+    .pub-list {
+      list-style: none;
+      counter-reset: pub;
+    }
+
+    .pub-list li {
+      margin-bottom: 16px;
+      font-size: 15px;
+      line-height: 1.5;
+      padding-left: 28px;
+      position: relative;
+    }
+
+    .pub-list li::before {
+      counter-increment: pub;
+      content: counter(pub) ".";
+      position: absolute;
+      left: 0;
+      color: var(--text-secondary);
+      font-weight: 600;
+    }
+
+    .pub-list .authors { color: var(--text); }
+    .pub-list .me { font-weight: 700; }
+    .pub-list .title { }
+    .pub-list .venue-inline { font-style: italic; }
+    .pub-list .doi { font-size: 13px; color: var(--text-secondary); }
+
+    /* ── About ── */
+    .about p {
+      margin-bottom: 16px;
+      font-size: 16px;
+      line-height: 1.65;
+    }
+
+    .about p:last-child { margin-bottom: 0; }
+
+    /* ── News ── */
+    .news-list {
+      list-style: none;
+    }
+
+    .news-list li {
+      font-size: 15px;
+      margin-bottom: 8px;
+      display: flex;
+      gap: 16px;
+    }
+
+    .news-list .date {
+      color: var(--text-secondary);
+      min-width: 80px;
+      flex-shrink: 0;
+      font-size: 14px;
+    }
+
+    /* ── Footer ── */
+    footer {
+      padding: 30px 0 50px;
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      body { font-size: 16px; }
+      header { padding: 40px 0 30px; }
+      header h1 { font-size: 24px; }
+      section { padding: 30px 0; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <header>
+    <h1>Jákup Svøðstein</h1>
+    <div class="affiliation">PhD Student, University of Copenhagen (DIKU) &middot; Assistant Professor, University of the Faroe Islands</div>
+    <p class="positioning">I survey, benchmark, and build ML systems for weather, maritime, and logistics &mdash; and my work consistently shows that data quality, evaluation design, and design-space understanding drive performance more than model complexity.</p>
+    <div class="links">
+      <a href="mailto:jakupsv@setur.fo">Email</a>
+      <a href="https://github.com/Marimuda">GitHub</a>
+      <a href="https://orcid.org/0000-0002-4374-1752">ORCID</a>
+      <a href="#publications">Publications</a>
+      <a href="#about">About</a>
+    </div>
+  </header>
+
+  <!-- ── Research ── -->
+  <section id="research">
+    <h2>Research</h2>
+
+    <div class="project">
+      <h3>GNN-CFD Design-Space Survey</h3>
+      <div class="venue">ACM Computing Surveys, 2026 &middot; 55 pages &middot; preprint</div>
+      <p>A three-axis taxonomy (Symmetry &times; Physics &times; Resolution) organizing 30+ GNN architectures for computational fluid dynamics. The Design-Space Cube maps where the field has explored and identifies the unsolved grand challenge at the (2,2,2) corner: gauge-equivariant networks with hard conservation laws on adaptive meshes.</p>
+    </div>
+
+    <div class="project">
+      <h3>FaroeWRF-500</h3>
+      <div class="venue">Submitted to NeurIPS 2026 Datasets &amp; Benchmarks &middot; preprint</div>
+      <p>A diagnostic weather benchmark over complex Faroese terrain &mdash; 500m resolution, 60,000 nodes, 8,867 hours, 28 validation stations from two independent observation networks. Five conditional evaluation protocols expose failure modes that aggregate metrics hide: intra-model variation across stations (2.3&times;) dwarfs inter-model variation (3%).</p>
+    </div>
+
+    <div class="project">
+      <h3>Data Quality Over Algorithms</h3>
+      <div class="venue">ICOIN 2026, Hanoi</div>
+      <p>A 174-configuration factorial experiment on AIS vessel classification. Three-way ANOVA shows data preprocessing explains 58.1% of performance variance (&eta;&sup2;=0.581) while model architecture choice is statistically negligible (&eta;&sup2;=0.004). The result challenges the standard "new model beats baseline" paper format.</p>
+    </div>
+
+    <div class="project">
+      <h3>Transfer Learning for Logistics</h3>
+      <div class="venue">CITA 2026</div>
+      <p>GATv2 spatio-temporal graph encoders for heterogeneous supply-chain graphs. Transfer learning as integration middleware delivers 30&ndash;41% accuracy improvement with 4&ndash;10&times; data reduction. Unified architectures shown to be an anti-pattern (1&ndash;4% degradation vs. task-specific models).</p>
+    </div>
+  </section>
+
+  <!-- ── Publications ── -->
+  <section id="publications">
+    <h2>Publications</h2>
+    <ol class="pub-list">
+      <li>
+        <span class="authors"><span class="me">J. Svøðstein</span>, K. Simonsen, E. Bjørnager Dam, R. Selvan.</span>
+        <span class="title">&ldquo;Graph Neural Networks for Computational Fluid Dynamics: A Design-Space Survey.&rdquo;</span>
+        <span class="venue-inline">ACM Computing Surveys</span>, 2026. (preprint)
+      </li>
+      <li>
+        <span class="authors"><span class="me">J. Svøðstein</span> et al.</span>
+        <span class="title">&ldquo;FaroeWRF-500: A Diagnostic Benchmark for Weather Model Failure Analysis over Complex Terrain.&rdquo;</span>
+        <span class="venue-inline">Submitted to NeurIPS 2026 Datasets &amp; Benchmarks</span>. (preprint)
+      </li>
+      <li>
+        <span class="authors"><span class="me">J. Svøðstein</span>, J. Kristmundsson.</span>
+        <span class="title">&ldquo;Data Quality Over Algorithms: A Multi-Factor Analysis of AIS Vessel Classification.&rdquo;</span>
+        <span class="venue-inline">ICOIN 2026</span>.
+      </li>
+      <li>
+        <span class="authors"><span class="me">J. Svøðstein</span>, J. Kristmundsson.</span>
+        <span class="title">&ldquo;Designing AI-Based Decision Support for Heterogeneous Logistics Systems.&rdquo;</span>
+        <span class="venue-inline">CITA 2026</span>.
+      </li>
+      <li>
+        <span class="authors">J. Kristmundsson, <span class="me">J. Svøðstein</span>.</span>
+        <span class="title">&ldquo;AIS Signal and Channel Dataset from Tórshavn Harbour.&rdquo;</span>
+        <span class="venue-inline">IEEE Data Descriptions</span>.
+        <span class="doi">DOI: <a href="https://doi.org/10.21227/fjhz-qf06">10.21227/fjhz-qf06</a></span>
+      </li>
+      <li>
+        <span class="authors">J. Kristmundsson, <span class="me">J. Svøðstein</span> et al.</span>
+        <span class="title">&ldquo;Adaptive AIS Transmission Power for Collision Avoidance.&rdquo;</span>
+        <span class="venue-inline">ICSCCT</span>.
+      </li>
+    </ol>
+  </section>
+
+  <!-- ── About ── -->
+  <section id="about" class="about">
+    <h2>About</h2>
+    <p>I am drawn to the gap between what ML benchmarks claim and what actually drives performance. Across weather prediction, maritime data science, and logistics, I keep finding the same pattern: the field chases model architectures when the real performance drivers are data quality, evaluation design, and problem formulation. My research sits at the intersection of graph neural networks, physical-domain ML, and experimental methodology &mdash; building the taxonomies, benchmarks, and experiments that isolate what actually matters.</p>
+
+    <p>I am a PhD student at DIKU (University of Copenhagen) and Assistant Professor in ICT at the University of the Faroe Islands. My doctoral project focuses on data-driven approaches for compressible and incompressible fluid dynamics modelling. I have supervised eight BSc theses and co-supervised two MSc students, and I teach courses in artificial intelligence and software engineering.</p>
+
+    <p>I grew up in the Faroe Islands, where weather and ocean are not abstractions but daily realities that shape everything &mdash; from fishing schedules to whether the helicopter flies. That proximity to the physical world informs how I think about ML: models that work on average but fail in the conditions that matter most are not good enough. Outside research, I am an international artistic gymnastics judge &mdash; a domain where precise evaluation under pressure is also the whole point.</p>
+  </section>
+
+  <!-- ── News ── -->
+  <section id="news">
+    <h2>News</h2>
+    <ul class="news-list">
+      <li><span class="date">2026</span><span>GNN-CFD survey published in ACM Computing Surveys</span></li>
+      <li><span class="date">2026</span><span>FaroeWRF-500 benchmark submitted to NeurIPS 2026</span></li>
+      <li><span class="date">Jan 2026</span><span>Presented AIS vessel classification at ICOIN, Hanoi</span></li>
+      <li><span class="date">2025</span><span>AIS-TSH dataset released on IEEE DataPort</span></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Jákup Svøðstein &middot; <a href="mailto:jakupsv@setur.fo">jakupsv@setur.fo</a> &middot; Tórshavn, Faroe Islands</p>
+  </footer>
+
+</div>
+
+</body>
+</html>
